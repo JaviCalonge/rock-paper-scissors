@@ -10,15 +10,51 @@
     <h1>Pierda, papel o tijera</h1>
 
     <script>
-        const a = rock;
-        const b = paper;
-        const c = scissors;
+
+        let computerSelection = Math.floor(Math.random()*3);
+        let pc
+        
+        
+        if (computerSelection == 0){
+                pc = "piedra"
+            }
+         
+        else if (computerSelection == 1){
+            pc = "papel"
+        } 
+        else {
+            pc = "tijera"
+        }
 
         
-
         
+        
+        let getPlayerChoice = prompt ("Tú eliges: piedra, papel o tijera")
 
-
+        if (getPlayerChoice == pc){
+            alert ("Duce!")
+        }
+        else if (getPlayerChoice == "piedra" && pc == "papel"){
+            alert ("Sorry, you lose! Computer choice papel")
+        }
+        else if (getPlayerChoice == "papel" && pc == "tijera"){
+            alert ("Sorry, you lose! Computer choice tijeras")
+        }
+        else if (getPlayerChoice == "tijera" && pc == "piedra"){
+            alert ("Sorry, you lose! Computer choice piedra")
+        }
+        else if (getPlayerChoice == "piedra" && pc == "tijera"){
+            alert ("Well done! You win")
+        }
+        else if (getPlayerChoice == "papel" && pc == "piedra"){
+            alert ("Well done! You win")
+        }
+        else if (getPlayerChoice == "tijera" && pc == "papel"){
+            alert ("Well done! You win")
+        }
+        else {
+            alert ("Error. Type piedra, papel o tijera")
+        }
     </script>
     
 </body>
